@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Antengo</title>
+		<link rel="shortcut icon" href="images/Avatar.ico"/>
+
+		<link href="http://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,700" rel="stylesheet" />
+
+		<!-- The main CSS files -->
+		<link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="style.css" rel="stylesheet" />
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body ng-app="antengoApp">
+		<!-- manages the top navigation and search bar -->
+		<top-nav-bar></top-nav-bar>
+
+		<div ng-view>
+			<!-- all content will be loaded here according to the route provider. this includes: -->
+			<!-- -the filters bar and the grid listings view (browse mode) -->
+			<!-- -the sell menu (sell mode) -->
+			<!-- -the view detail/buy menu (inspect mode) -->
+		</div>
+
+
+		<!-- Include AngularJS from Google's CDN and the resource module -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+		<!-- Data -->
+		<script src="listingsDataBlob.js"></script>
+		<!-- Antengo scripts -->
+		<script src="script.js"></script>
+		<script src="listingsService.js"></script>
+		<script src="Detail/detailViewService.js"></script>
+		<script src="Navigation/listingsCategoryService.js"></script>
+		<script src="Navigation/listingsSearchService.js"></script>
+		<script src="Navigation/listingsDistanceService.js"></script>
+		<script src="Navigation/SearchBarCtrl.js"></script>
+		<script src="Navigation/FiltersController.js"></script>
+		<script src="Navigation/TopNavBarController.js"></script>
+		<script src="GridListings/GridListingsCtrl.js"></script>
+		<script src="Detail/DetailViewController.js"></script>
+		<script src="Sell/SellViewController.js"></script>
+
+		
+	</body>
+</html>

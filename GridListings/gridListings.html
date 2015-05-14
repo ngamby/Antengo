@@ -1,0 +1,9 @@
+<div class="backgroundContainer">
+	<div class="container"> 
+		<div class="row">
+			<div class="col-xs-6 col-sm-4" ng-repeat="listing in listings | filter: search | filter: isWithinDistance | filter: isInCategory">
+				<a href="#detailView" ng-click="showDetail(listing)"><div listing-display></div></a>
+			</div>
+		</div>
+	</div>
+</div>

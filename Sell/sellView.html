@@ -1,0 +1,20 @@
+<div class="sell-input input-group">
+  <span class="input-group-addon" id="b">Title</span>
+  <input ng-model="title" type="text" class="form-control" placeholder="Give your listing a title" aria-describedby="basic-addon1">
+</div>
+<div class="sell-input input-group">
+  <span class="input-group-addon" id="basic-addon1">Text</span>
+  <input ng-model="text" type="text" class="form-control" placeholder="Go in depth about your listing" aria-describedby="basic-addon1">
+</div>
+<div class="sell-input input-group">
+  <span class="input-group-addon" id="basic-addon1">Price</span>
+  <input ng-model="price" type="text" class="form-control" placeholder="Name your price" aria-describedby="basic-addon1">
+</div>
+<!-- select category -->
+<div class="selectViewContainer">
+	<select ng-model="selectedCategory" ng-options="category for category in categories" class="form-control"></select>
+</div>
+<p>
+  	<a class="btn btn-primary btn-lg" href="#" ng-click="sell()">Sell It!</a>
+  	<a class="btn btn-primary btn-lg" href="#" role="button">Browse Listings Instead</a>
+</p>

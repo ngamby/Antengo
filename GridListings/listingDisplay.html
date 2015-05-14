@@ -1,0 +1,18 @@
+<!-- header of listing object, including profile, distance -->
+<div class="header">
+	<div class="profPicContainer"><img prof-pic-img ng-src="" err-src="images/Avatar.png" class="profPic"/></div>
+	<h4 name class="name" ng-bind></h4>
+	<h5 class="distance">{{listing.dist}} mi</h5>
+</div>
+
+<!-- middle of listing object, including picture, category, and price -->
+<div class="middle">
+	<div price class="price">{{listing.price}}</div>
+	<div category class="category">{{listing.categoryName}}</div>
+	<img item-pic class="itemPic" ng-src="{{listing.photo}}" err-src="images/Avatar.png"/>
+</div>
+
+<!-- footer of listing object, including title -->
+<div class="footer">
+	<p>{{listing.title}}</p>
+</div>

@@ -1,0 +1,24 @@
+<div>
+	<div class="filtersContainer">
+		<a class="purpleText" ng-click="showCategoryAdjustBar=!showCategoryAdjustBar">{{selectedCategory.cat}}</a>
+		<div class="normalText">&nbsp;within&nbsp;</div>
+		<a class="purpleText" ng-click="showDistanceAdjustBar=!showDistanceAdjustBar">{{selectedDistance.dist}}</a>
+		<div class="normalText">&nbsp;mi.</div>
+		<a class="clearButton" ng-click="clearDistanceAndCategory()">
+			<div class="purpleText">clear</div>
+		</a>
+	</div>
+	<div class="filtersSelectorContainer">
+		<div ng-show="showDistanceAdjustBar">
+			<div class="selectViewContainer">
+				<select ng-model="selectedDistance.dist" ng-options="distance for distance in distances" class="form-control"></select>
+			</div>
+		</div>
+		<div ng-show="showCategoryAdjustBar">
+			<div class="selectViewContainer">
+				<select ng-model="selectedCategory.cat" ng-options="category for category in categories" class="form-control"></select>
+			</div>
+		</div>
+	</div>
+
+</div>

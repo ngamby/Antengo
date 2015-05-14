@@ -1,0 +1,17 @@
+
+<div>
+	<div><img style="height:450px;width:450px" err-src="images/Avatar.png" ng-src="{{selectedImage}}"/></div>
+	<img ng-click="setImage($index)" style="height:50px;width:50px" ng-repeat="thumb in photoThumbs track by $index" ng-src="{{thumb}}" err-src="images/Avatar.png"></img>
+</div>
+<div class="jumbotron">
+  <h1>{{listing.title}}</h1>
+  <p>{{listing.text}}</p>
+  <h6>{{listing.price}}</h6>
+  <h6>{{listing.categoryName}}</h6>
+  <p>
+  	<a class="btn btn-primary btn-lg" href="#" ng-click="buy()">Buy It!</a>
+  	<a class="btn btn-primary btn-lg" href="#" role="button">Browse Listings Again</a>
+  </p>
+</div>
+
+</div>
