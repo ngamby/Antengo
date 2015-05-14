@@ -1,3 +1,4 @@
+// This controller manages the selling view. the items in scope represent data to be added through the listing service
 angular.module("antengoApp").controller('SellViewController', ['$scope', 'listingsService', function($scope, listingsService) {
 	var listing = {};
 	$scope.title = "";
@@ -8,8 +9,8 @@ angular.module("antengoApp").controller('SellViewController', ['$scope', 'listin
 
 	$scope.sell = function() {
 		listingsService.addListing({
-			"id": Math.floor((Math.random() * 100000000) + 1),
-			"dist":  Math.floor((Math.random() * 100) + 1),
+			"id": Math.floor((Math.random() * 100000000) + 1), //random number that's need for reference when buying and selling
+			"dist":  Math.floor((Math.random() * 100) + 1), // random distance.
 			"userId":"1",
 			"twUsername":"",
 			"twitterId":"-1",
@@ -33,8 +34,8 @@ angular.module("antengoApp").controller('SellViewController', ['$scope', 'listin
 			"categoryName": $scope.selectedCategory,
 			"dataSourceName":"nerp",
 			"timePassed":"0",
-			"photo": 'http://www.clker.com/cliparts/d/7/1/f/1194985444514621050formichina_architetto_fr_01.svg.hi.png',
-			"photoThumb":'http://www.clker.com/cliparts/d/7/1/f/1194985444514621050formichina_architetto_fr_01.svg.hi.png'
+			"photo": 'http://www.misskatecuttables.com/uploads/shopping_cart/7727/large_cute-ant.png', // i love google.
+			"photoThumb":'http://www.misskatecuttables.com/uploads/shopping_cart/7727/large_cute-ant.png'
 		});
 	}
 }]);

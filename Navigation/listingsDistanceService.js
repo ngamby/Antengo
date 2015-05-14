@@ -1,3 +1,5 @@
+// this factory provides controllers with the ability to manage distance. it interacts with 
+// the navigation bar and the grid listings controller.
 angular.module("antengoApp").factory("listingsDistanceService", function() {
 	var listingsDistanceService = {
 		isWithinDistance: isWithinDistance,

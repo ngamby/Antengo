@@ -1,3 +1,5 @@
+// this service manages the data input by the user in the search bar. it allows other
+// controllers to determine whether a listing is a part of the user's search text.
 angular.module("antengoApp").factory("listingsSearchService", function() {
 	var listingsSearchService = {
 		search: search,

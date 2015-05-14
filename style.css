@@ -1,3 +1,7 @@
+/* This file contains all the style I used outside of bootstrap, 
+ * Each header represents all the styling for a certain html file.
+ */
+
 /*-------------------------
 	Simple reset
 --------------------------*/
@@ -87,6 +91,7 @@ float: right!important;
 }
 
 
+
 /*-------------------------
 	search bar layout
 --------------------------*/
@@ -102,7 +107,6 @@ float: right!important;
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-
 
 /*-------------------------
 	distance filter layout
@@ -168,10 +172,20 @@ div[listing-display] {
 	border-radius: 4px;
 	overflow: hidden;
 	border-bottom: 2px solid #e8e8e8;
+
+	display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
+
 div[listing-display]:hover {
-	border: 3px solid #e8e8e8;
-	transition: border 0.2s ease-out;
+    transform: scale(1.01);
+    color: black;
 }
 
 /*header display*/
@@ -233,7 +247,7 @@ div[listing-display] div.category {
 	z-index: 99;
 	position: absolute;
 	bottom: 65px;
-	right: 8px;
+	right: 0px;
 	background-color: rgba(78, 78, 81, .7);
 	color: white;
 	height: 36px;
@@ -277,58 +291,4 @@ input[type="color"]:focus,
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(140, 119, 182, 0.6);
   outline: 0 none;
 }
-
-
-/*-------------------------
-	The search input
---------------------------*/
-
- 
-/*.nav ul {
-  list-style: none;
-  background-color: #444;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-}
-.nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
-}
- 
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  text-align: center;
-  transition: .3s background-color;
-}
- 
-.nav a:hover {
-  background-color: #005f5f;
-}
- 
-.nav a.active {
-  background-color: #fff;
-  color: #444;
-  cursor: default;
-}
- 
-@media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-  }
- 
-  .nav li {
-    display: inline-block;
-    margin-right: -4px;
-  }
-} */
 

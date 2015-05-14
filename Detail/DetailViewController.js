@@ -1,3 +1,6 @@
+// this controller manages the view for the detail. If a listing is purchased or 
+// the user wants to return to the listings, it gores through here. The user can 
+// browse photos through the functionality of this controller.
 angular.module("antengoApp").controller('DetailViewController', 
 	['$scope', 'detailViewService', 'listingsService', 
 	function($scope, detailViewService, listingsService) {

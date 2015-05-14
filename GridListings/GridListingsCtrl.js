@@ -1,3 +1,5 @@
+// This controller will manages the grid view of all the listings. It provides all the functionality to the html
+// along with the directives that follow it, which all deal with how a listing displays contents. 
 var ctrl = angular.module("antengoApp").controller('GridListingsController', 
 	['$scope', 'listingsService', 'listingsSearchService', 'listingsDistanceService', 'listingsCategoryService', 'detailViewService',
 	function($scope, listingsService, listingsSearchService, listingsDistanceService, listingsCategoryService, detailViewService) {
@@ -15,6 +17,7 @@ var ctrl = angular.module("antengoApp").controller('GridListingsController',
 	}
 }]);
 
+// each listing is built in this directive. 
 ctrl.directive("listingDisplay", function() {
 	return {
 		restrict: 'A',
@@ -22,6 +25,7 @@ ctrl.directive("listingDisplay", function() {
 	};
 });
 
+// this provides logic for determining a pofile picture
 ctrl.directive("profPicImg", function() {
 	return {
 		restrict: 'A',
@@ -35,23 +39,23 @@ ctrl.directive("profPicImg", function() {
 	}
 });
 
-// commented this out because all listings have a photo
+
 // this will make sure that the listing has a photo of the item in it. otherwise, it will just remove it
-// ctrl.directive("itemPic", function() {
-// 	return {
-// 		restrict: 'A',
-// 		link: (function(scope, element, attrs) { 
-// 			if(scope.listing.hasPhoto == 1) { //awk cuz hasPhoto is a string but == saves the day!
-// 				attrs.ngSrc = scope.listing.photo;
-// 			} else {
-// 				attrs.ngSrc = "images/Avatar.png";
-// 			}
-// 		})
-// 	}
-// });
+ctrl.directive("itemPic", function() {
+	return {
+		restrict: 'A',
+		link: (function(scope, element, attrs) { 
+			if(scope.listing.hasPhoto == 1) { //awk cuz hasPhoto is a string but == saves the day!
+				attrs.ngSrc = scope.listing.photo;
+			} else {
+				attrs.ngSrc = "images/Avatar.png";
+			}
+		})
+	}
+});
 
 
-
+// this provides logic for determining the name.
 ctrl.directive("name", function() {
 	return {
 		restrict: 'A',
@@ -65,6 +69,7 @@ ctrl.directive("name", function() {
 	}
 });
 
+//this provides logic for determinig the price.
 ctrl.directive("price", function() {
 	return {
 		restrict: 'A',

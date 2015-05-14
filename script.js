@@ -1,3 +1,8 @@
+// This is the primary script used for creating the different routes for the application. 
+// It also creates the module for the application and creates directives that fill in each
+// component of the index with the right controllers and html files.
+
+
 // This is the antengo app module. there is only one module in this application
 var app = angular.module("antengoApp", ['ngRoute']);
 
